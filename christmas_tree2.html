@@ -552,12 +552,14 @@
             );
             handLandmarker = await HandLandmarker.createFromOptions(vision, {
                 baseOptions: {
-                    modelAssetPath: `https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/1/hand_landmarker.task`,
+                    modelAssetPath: `./models/hand_landmarker.task`,
                     delegate: "GPU"
                 },
                 runningMode: "VIDEO",
                 numHands: 1
             });
+            
+
             
             if (navigator.mediaDevices?.getUserMedia) {
                 const stream = await navigator.mediaDevices.getUserMedia({ video: true });

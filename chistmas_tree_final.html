@@ -220,7 +220,7 @@
             camera: { z: 50 },
             
             preload: {
-                autoScanLocal: true,
+                autoScanLocal: false,
                 scanCount: 200, 
                 images: [
                     'https://images.unsplash.com/photo-1543589077-47d81606c1bf?q=80&w=600', 
@@ -690,7 +690,7 @@
             );
             handLandmarker = await HandLandmarker.createFromOptions(vision, {
                 baseOptions: {
-                    modelAssetPath: `https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/1/hand_landmarker.task`,
+                    modelAssetPath: `./models/hand_landmarker.task`,
                     delegate: "GPU"
                 },
                 runningMode: "VIDEO",

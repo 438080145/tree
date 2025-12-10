@@ -213,7 +213,7 @@
                 // 启用自动扫描本地 "./images/" 文件夹
                 // 注意：这需要图片按顺序命名 (1.jpg, 2.jpg ...) 
                 // 或者您手动在 'images' 数组中列出具体文件名
-                autoScanLocal: true,
+                autoScanLocal: false,
                 scanCount: 200, // 尝试扫描 1.jpg 到 30.jpg
                 
                 // 固定在线演示图片 (始终加载)
@@ -696,7 +696,7 @@
             );
             handLandmarker = await HandLandmarker.createFromOptions(vision, {
                 baseOptions: {
-                    modelAssetPath: `https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/1/hand_landmarker.task`,
+                    modelAssetPath: `./models/hand_landmarker.task`,
                     delegate: "GPU"
                 },
                 runningMode: "VIDEO",

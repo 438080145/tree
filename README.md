@@ -71,6 +71,11 @@ python -m http.server 8000
 npx http-server .
 ```
 
+### ⚡ 本地加速优化 (New)
+
+为了解决 Google 模型加载慢的问题，我已经将 AI 模型下载到本地 `models/` 目录。
+现在打开页面，手势识别功能的加载速度会快很多！无需额外操作。
+
 
 
 **Merry Christmas\! 🎅**
